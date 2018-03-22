@@ -1,0 +1,12 @@
+
+== Future
+
+May be generalized and renamed to syncup or listenup later.
+
+It could become:
+
+	$ listenup --cmd parity --exp Imported --run "kill <pid>"
+
+or
+
+	$ listenup --cmd parity --exp Imported && kill $!
