@@ -1,6 +1,6 @@
 {
   "name": "ethup",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Utility to let your ethereum node sync and stop",
   "main": "ethup",
   "bin": "./ethup",
@@ -14,7 +14,7 @@
   "keywords": [
     "ethereum"
   ],
-  "author": "Wilfried Kopp <w.kopp@kigroup.de>",
+  "author": "chevdor <chevdor@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "yargs": "^11.0.0"
