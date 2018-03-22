@@ -2,13 +2,14 @@
   "name": "ethup",
   "version": "0.1.0",
   "description": "Utility to let your ethereum node sync and stop",
-  "main": "index.js",
+  "main": "ethup",
+  "bin": "./ethup",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "tbd"
+    "url": "https://github.com/chevdor/ethup"
   },
   "keywords": [
     "ethereum"

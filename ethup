@@ -12,20 +12,19 @@ const argv = require('yargs')
     .help('h')
     .alias('h', 'help')
     .epilog('chevdor-(C)2018')
-    .argv;
+    .argv
 
-var Ethup = require('./index.js');
+var Ethup = require('./index.js')
 var ethup = new Ethup()
 
 const regexp = 'Imported(.*blocks=1\\s)?'
 
 ethup.run(argv.command, [], regexp, (status) => {
-    console.log('Exiting');
+    console.log('Exiting')
     process.exit(status)
 })
 
 process.on('SIGINT', function() {
     console.log("Caught interrupt signal");
-
     ethup.kill()
 });

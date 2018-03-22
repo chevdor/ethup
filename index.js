@@ -1,4 +1,4 @@
-const { spawn } = require('child_process');
+const { spawn } = require('child_process')
 
 class Ethup {
     constructor() {
@@ -38,4 +38,4 @@ class Ethup {
     }
 }
 
-module.exports = Ethup;
+module.exports = Ethup

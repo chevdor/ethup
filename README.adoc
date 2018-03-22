@@ -1,7 +1,15 @@
 = ethup
 
-A command line utility to start your ethereum node and stop it once it has finished synchronizing the chain.
+A command line utility to start your ethereum nodes and stop them once they have finished synchronizing the chain.
 It works with both parity and geth.
+
+== How does it work?
+
+It works by starting the node with the command you provide (so you may use the options you want) and applying some very complex magic to guess when the sync is complete. It will then stop the node and exit.
+
+== Can I trust you?
+
+Nop. Never. You should check the code, it is really not that long anyway...
 
 == Usage
 
@@ -16,4 +24,9 @@ Samples:
 	$ ethup -c "parity --chain ropsten"
 	$ ethup -c "parity"
 
+If, like me, you like to keep you chains in sync, you may build a recipe similar to (assuming you have both geth and parity installed, what you should :) ):
 
+	time ethup -c "geth --rinkeby"; \
+	ethup -c "parity --chain kovan"; \
+	ethup -c "parity --chain ropsten"; \
+	ethup -c "parity"
