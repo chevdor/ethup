@@ -1,0 +1,21 @@
+{
+  "name": "ethup",
+  "version": "0.1.0",
+  "description": "Utility to let your ethereum node sync and stop",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tbd"
+  },
+  "keywords": [
+    "ethereum"
+  ],
+  "author": "Wilfried Kopp <w.kopp@kigroup.de>",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^11.0.0"
+  }
+}

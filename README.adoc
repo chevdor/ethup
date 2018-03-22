@@ -1,0 +1,29 @@
+= ethup
+
+A command line utility to start your ethereum node and stop it once it has finished synchronizing the chain.
+
+
+== Usage
+
+Call the following command for the doc:
+
+	$ ethup --help
+
+Samples:
+
+	$ ethup start -c "geth --rinkeby"
+	$ ethup start -c "parity --chain kovan"
+	$ ethup start -c "parity --chain ropsten"
+	$ ethup start -c "parity"
+
+== Future
+
+May be generalized and renamed to syncup or listenup later.
+
+It could become:
+
+	$ listenup --cmd parity --exp Imported --run "kill <pid>"
+
+or
+
+	$ listenup --cmd parity --exp Imported && kill $!

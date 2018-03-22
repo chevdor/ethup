@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+const argv = require('yargs')
+    .usage('Usage: $0 <command> [options]')
+    // .command('start', 'start a process')
+    .example('$0 -c geth', 'Run Geth until the chain is synced')
+    .example('$0 -c parity', 'Run Parity until the chain is synced')
+    .alias('c', 'command')
+    .nargs('c', 1)
+    .describe('c', 'Run a command')
+    .demandOption(['c'])
+    .help('h')
+    .alias('h', 'help')
+    .epilog('chevdor-(C)2018')
+    .argv;
+
+var Ethup = require('./index.js');
+var ethup = new Ethup()
+
+const regexp = 'Imported(.*blocks=1\\s)?'
+
+ethup.run(argv.command, [], regexp, (status) => {
+    console.log('Exiting');
+    process.exit(status)
+})
+
+process.on('SIGINT', function() {
+    console.log("Caught interrupt signal");
+
+    ethup.kill()
+});
