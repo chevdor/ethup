@@ -17,7 +17,7 @@ const argv = require('yargs')
 var Ethup = require('./index.js')
 var ethup = new Ethup()
 
-const regexp = 'Imported(.*blocks=1\\s)?'
+const regexp = '(Imported \#|Imported.*blocks=1\\s)'
 
 ethup.run(argv.command, [], regexp, (status) => {
     console.log('Exiting')
