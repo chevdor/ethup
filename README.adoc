@@ -26,7 +26,7 @@ Samples:
 
 If, like me, you like to keep you chains in sync, you may build a recipe similar to (assuming you have both geth and parity installed, what you should :) ):
 
-	time ethup -c "geth --rinkeby"; \
-	ethup -c "parity --chain kovan"; \
-	ethup -c "parity --chain ropsten"; \
-	ethup -c "parity"
+	$  time ethup -c "parity --chain kovan"; \
+	time ethup -c "parity --chain ropsten"; \
+	time ethup -c "parity"; \
+	time ethup -c "geth --rinkeby"
